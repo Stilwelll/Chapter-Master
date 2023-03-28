@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class FactionSelect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static FactionSelect Instance;
+    public string dataSelection;
+
+    private void Awake()
     {
-        
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BloodRavenSelect()
     {
-        
+        dataSelection = "Blood Ravens";
+        SceneManager.LoadScene(2);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
