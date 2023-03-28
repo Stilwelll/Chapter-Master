@@ -23,11 +23,15 @@ public class FactionSelect : MonoBehaviour
     public void BloodRavenSelect()
     {
         dataSelection = "Blood Ravens";
-        SceneManager.LoadScene(2);
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LoadChapterOrg()
+    {
+        SceneManager.LoadScene(2);
     }
 }

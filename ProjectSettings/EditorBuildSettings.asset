@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Faction Selection.unity
     guid: f2b8d0fdaeec7a449860b7bef5d3d3ce
+  - enabled: 1
+    path: Assets/Scenes/ChapterOrg.unity
+    guid: 445459fc3e7edb049bb46470d65dc15a
   m_configObjects: {}
