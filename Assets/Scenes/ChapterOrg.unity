@@ -705,7 +705,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792374066}
   m_HandleRect: {fileID: 1792374065}
   m_Direction: 0
-  m_Value: -0.0001372872
+  m_Value: 0
   m_Size: 0.9997006
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -779,6 +779,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04402ad6575431d4abb7064362855fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeIcons:
+  - {fileID: 2800000, guid: dc747b987ae38cb47839e10708ba40b9, type: 3}
+  - {fileID: 2800000, guid: eaa5f08d873be1f4c8dce37c611f5004, type: 3}
+  - {fileID: 2800000, guid: b65d4860c8cd9e24ba96eadc467a2d3b, type: 3}
+  - {fileID: 2800000, guid: 2ba95ff10129bc546a2d9a5dbdf3b434, type: 3}
+  - {fileID: 2800000, guid: abd204250ef6b7844a31cb7699994e81, type: 3}
+  firstName:
+  - Davian
+  - Apollo
+  - Adrax
+  - Canis
+  - Lukas
+  - Vaneal
+  - Elathus
+  - Sollion
+  lastName:
+  - Zephor
+  - Hashmir
+  - Alcaso
+  - Calgoss
+  - Thule
+  - Angelos
+  - Boreale
+  standardTypes:
+  - Tactical
+  - Devastator
+  - Assault
+  - Command
+  companies:
+  - 1st Company
+  - 2nd Company
+  - 3rd Company
+  ranks:
+  - Scout
+  - Brother
+  - Veteran
+  - Sergeant
 --- !u!114 &749194903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.000053576212, y: 0.00033569336}
+  m_AnchoredPosition: {x: -0.000025690375, y: 0.00018310547}
   m_SizeDelta: {x: 1485, y: 961.89}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1087405975
@@ -2255,7 +2292,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 786801606}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2415,5 +2452,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMarineChar
       objectReference: {fileID: 0}
+    - target: {fileID: 7363829233155856652, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_text
+      value: '
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233155856652, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233155856652, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233585225673, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233585225673, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 44.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233585225673, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363829233879839007, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 29aa521b860f88a4e86306808868662d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a1d8f122a060a48804e16f1e7fcb3d, type: 3}
