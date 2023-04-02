@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     Dictionary<int, GameObject> unitTable = new Dictionary<int, GameObject>();
+    
     // Start is called before the first frame update
     void Awake()
     {
