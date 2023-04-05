@@ -10,6 +10,7 @@ public class UnitGeneration : MonoBehaviour
     public GameManager gameManager;
 
     private Vector3 charOffset;
+
     public GameObject spaceMarineChar;
     public GameObject content;
 
@@ -23,8 +24,10 @@ public class UnitGeneration : MonoBehaviour
 
         // getting a random number between either number to populate the character list
         // also setting the charcount to that initial char count
-        int startingCharCount = Random.Range(5, 10);
+        int startingCharCount = Random.Range(10, 20);
         charCount = startingCharCount;
+
+        ContentBoxAdjust();
 
         // populating the list with the amount generated above. also increasing the offset with each 
         // -character generated
@@ -63,9 +66,11 @@ public class UnitGeneration : MonoBehaviour
         GameObject charTab;
         TextMeshProUGUI childsText;
         Transform itemsChild;
+        Transform itemsChild2;
 
-        int count;
-        int count2;
+        Texture2D[] icons = randomUnitTypes.typeIcons;
+
+        int rankCountSergeant = 0;
         int randomUnitIndex;
         int randomUnitIndex2;
         foreach (var item in gameManager.unitTable)
@@ -79,7 +84,7 @@ public class UnitGeneration : MonoBehaviour
             randomUnitIndex = Random.Range(0, randomUnitTypes.firstName.Length - 1);
             randomUnitIndex2 = Random.Range(0, randomUnitTypes.firstName.Length - 1);
 
-            childsText.text = randomUnitTypes.firstName[randomUnitIndex] + " " + randomUnitTypes.lastName[randomUnitIndex];
+            childsText.text = randomUnitTypes.firstName[randomUnitIndex] + " " + randomUnitTypes.lastName[randomUnitIndex2];
 
             // Randomly choosing the type
             charTab = gameManager.unitTable[item.Key];
@@ -89,6 +94,23 @@ public class UnitGeneration : MonoBehaviour
             randomUnitIndex = Random.Range(0, randomUnitTypes.standardTypes.Length - 1);
             childsText.text = randomUnitTypes.standardTypes[randomUnitIndex];
 
+            // Setting Type Image
+            itemsChild2 = charTab.transform.Find("TypeImage");
+            RawImage childsImage = itemsChild2.GetComponent<RawImage>();
+            if (childsText.text == "Assault")
+            {
+                childsImage.texture = icons[0];
+            }
+            else if (childsText.text == "Devastator")
+            {
+                childsImage.texture = icons[2];
+            }
+            else if (childsText.text == "Tactical")
+            {
+                childsImage.texture = icons[3];
+            }
+
+            //======================================================
             // Randomly choosing the company
             charTab = gameManager.unitTable[item.Key];
             itemsChild = charTab.transform.Find("Company");
@@ -102,8 +124,45 @@ public class UnitGeneration : MonoBehaviour
             itemsChild = charTab.transform.Find("Rank");
             childsText = itemsChild.GetComponent<TextMeshProUGUI>();
 
-            randomUnitIndex = Random.Range(0, randomUnitTypes.ranks.Length - 1);
-            childsText.text = randomUnitTypes.ranks[randomUnitIndex];
+            randomUnitIndex = Random.Range(0, randomUnitTypes.ranks.Length);
+            if (randomUnitIndex == 3)
+            {
+                rankCountSergeant++;
+            }
+
+            // if there are more than 3 sergeants, than the units rank will be Brother
+            if (rankCountSergeant > 4)
+            {
+                childsText.text = randomUnitTypes.ranks[1];  
+            }
+            else
+            {
+                childsText.text = randomUnitTypes.ranks[randomUnitIndex];
+            }
+
+            // Setting veteran rank image
+            if (childsText.text == "Veteran")
+            {
+                childsImage.texture = icons[4];
+            }
+
+            if (childsText.text == "Sergeant")
+            {
+                childsImage.texture = icons[1];
+            }
+        }
+    }
+
+    void ContentBoxAdjust()
+    {
+        RectTransform contentBox;
+        contentBox = content.GetComponent<RectTransform>();
+
+        if (charCount > 6)
+        {
+            float previousSize = 145.65f * charCount;
+            // contentBox.TransformDirection(Vector3.down * previousSize);
+            // // contentBox.sizeDelta = new Vector2(contentBox.sizeDelta.x, contentBox.sizeDelta.y + previousSize);
         }
     }
 }

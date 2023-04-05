@@ -397,6 +397,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160574966}
   m_CullTransparentMesh: 1
+--- !u!1 &291144090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291144093}
+  - component: {fileID: 291144092}
+  - component: {fileID: 291144091}
+  m_Layer: 0
+  m_Name: UnitGeneration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &291144091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291144090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c979286678e909b44a6d2b52b60df40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomUnitTypes: {fileID: 291144092}
+  gameManager: {fileID: 749194903}
+  spaceMarineChar: {fileID: 7363829232909484362, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
+    type: 3}
+  content: {fileID: 849647042}
+  charCount: 0
+--- !u!114 &291144092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291144090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04402ad6575431d4abb7064362855fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeIcons:
+  - {fileID: 2800000, guid: dc747b987ae38cb47839e10708ba40b9, type: 3}
+  - {fileID: 2800000, guid: eaa5f08d873be1f4c8dce37c611f5004, type: 3}
+  - {fileID: 2800000, guid: b65d4860c8cd9e24ba96eadc467a2d3b, type: 3}
+  - {fileID: 2800000, guid: 2ba95ff10129bc546a2d9a5dbdf3b434, type: 3}
+  - {fileID: 2800000, guid: abd204250ef6b7844a31cb7699994e81, type: 3}
+  firstName:
+  - Davian
+  - Apollo
+  - Adrax
+  - Canis
+  - Lukas
+  - Vaneal
+  - Elathus
+  - Sollion
+  lastName:
+  - Zephor
+  - Hashmir
+  - Alcaso
+  - Calgoss
+  - Thule
+  - Angelos
+  - Boreale
+  standardTypes:
+  - Tactical
+  - Devastator
+  - Assault
+  - Command
+  companies:
+  - 1st Company
+  - 2nd Company
+  - 3rd Company
+  ranks:
+  - Scout
+  - Brother
+  - Veteran
+  - Sergeant
+--- !u!4 &291144093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291144090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 882.03595, y: 537.463, z: 15.828441}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365912716
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -497.945}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &709029459
@@ -896,8 +996,6 @@ GameObject:
   m_Component:
   - component: {fileID: 749194904}
   - component: {fileID: 749194903}
-  - component: {fileID: 749194902}
-  - component: {fileID: 749194905}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -905,55 +1003,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &749194902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749194901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04402ad6575431d4abb7064362855fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeIcons:
-  - {fileID: 2800000, guid: dc747b987ae38cb47839e10708ba40b9, type: 3}
-  - {fileID: 2800000, guid: eaa5f08d873be1f4c8dce37c611f5004, type: 3}
-  - {fileID: 2800000, guid: b65d4860c8cd9e24ba96eadc467a2d3b, type: 3}
-  - {fileID: 2800000, guid: 2ba95ff10129bc546a2d9a5dbdf3b434, type: 3}
-  - {fileID: 2800000, guid: abd204250ef6b7844a31cb7699994e81, type: 3}
-  firstName:
-  - Davian
-  - Apollo
-  - Adrax
-  - Canis
-  - Lukas
-  - Vaneal
-  - Elathus
-  - Sollion
-  lastName:
-  - Zephor
-  - Hashmir
-  - Alcaso
-  - Calgoss
-  - Thule
-  - Angelos
-  - Boreale
-  standardTypes:
-  - Tactical
-  - Devastator
-  - Assault
-  - Command
-  companies:
-  - 1st Company
-  - 2nd Company
-  - 3rd Company
-  ranks:
-  - Scout
-  - Brother
-  - Veteran
-  - Sergeant
 --- !u!114 &749194903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5973d1339df3b438a5ae91e7f0fda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charCount: 0
 --- !u!4 &749194904
 Transform:
   m_ObjectHideFlags: 0
@@ -981,24 +1031,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749194905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749194901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c979286678e909b44a6d2b52b60df40c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomUnitTypes: {fileID: 749194902}
-  gameManager: {fileID: 749194903}
-  spaceMarineChar: {fileID: 7363829232909484362, guid: 66a1d8f122a060a48804e16f1e7fcb3d,
-    type: 3}
-  content: {fileID: 849647042}
-  charCount: 0
 --- !u!1 &749578789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,10 +1240,10 @@ RectTransform:
   m_Father: {fileID: 1939409492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.000025690375, y: -231.61253}
-  m_SizeDelta: {x: 1485, y: 1425.1151}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1571.9473}
+  m_SizeDelta: {x: 1485, y: 3143.895}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &963171323
 GameObject:
@@ -1478,10 +1510,10 @@ RectTransform:
   m_Father: {fileID: 849647043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.150024, y: 667.53}
-  m_SizeDelta: {x: 1501.3, y: 90.062}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 8.150024, y: -45.180054}
+  m_SizeDelta: {x: 1501.3, y: 90.06201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431685589
 MonoBehaviour:
@@ -2350,7 +2382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 849647043}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -2714,8 +2746,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 786801607}
   m_HandleRect: {fileID: 786801606}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6749359
+  m_Value: 0.9999998
+  m_Size: 0.23427676
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
