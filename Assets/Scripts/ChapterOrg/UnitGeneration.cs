@@ -27,8 +27,6 @@ public class UnitGeneration : MonoBehaviour
         int startingCharCount = Random.Range(10, 20);
         charCount = startingCharCount;
 
-        ContentBoxAdjust();
-
         // populating the list with the amount generated above. also increasing the offset with each 
         // -character generated
         for (int i = 0; i < startingCharCount + 1; i++)
@@ -76,7 +74,6 @@ public class UnitGeneration : MonoBehaviour
         foreach (var item in gameManager.unitTable)
         {
             // Randomly choosing the names
-
             charTab = gameManager.unitTable[item.Key];
             itemsChild = charTab.transform.Find("Name");
             childsText = itemsChild.GetComponent<TextMeshProUGUI>();
@@ -109,8 +106,8 @@ public class UnitGeneration : MonoBehaviour
             {
                 childsImage.texture = icons[3];
             }
-
             //======================================================
+            
             // Randomly choosing the company
             charTab = gameManager.unitTable[item.Key];
             itemsChild = charTab.transform.Find("Company");
@@ -150,19 +147,6 @@ public class UnitGeneration : MonoBehaviour
             {
                 childsImage.texture = icons[1];
             }
-        }
-    }
-
-    void ContentBoxAdjust()
-    {
-        RectTransform contentBox;
-        contentBox = content.GetComponent<RectTransform>();
-
-        if (charCount > 6)
-        {
-            float previousSize = 145.65f * charCount;
-            // contentBox.TransformDirection(Vector3.down * previousSize);
-            // // contentBox.sizeDelta = new Vector2(contentBox.sizeDelta.x, contentBox.sizeDelta.y + previousSize);
         }
     }
 }
